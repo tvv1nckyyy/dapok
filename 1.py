@@ -1,4 +1,8 @@
 import random
+import os
+import pygame, sys
+from pygame.locals import *
+#
 a = []
 a.append("тб")
 a.append("тк")
@@ -56,7 +60,30 @@ a.append("2п")
 random.shuffle(a)
 #
 i=0
-while(i<len(a)):
-  print(a[i],end="")
-  input()
-  i+=1
+#while(i<len(a)):
+  #print(a[i],end="")
+  #input()
+  #i+=1
+#
+pygame.init()
+#
+image1 = pygame.image.load(os.path.join('deck.png'))
+#
+screen = pygame.display.set_mode((400,400),0,32)
+pygame.display.set_caption("Poker Dapok");
+
+#(x,y,fontSize) = (10,40,40)
+#myFont = pygame.font.SysFont("None", fontSize)
+#fontColor = (255,255,0)
+#bgColor = (255,255,255)
+#fontImage = myFont.render(helloText, 0, (fontColor))
+mainLoop = True
+while mainLoop:
+  for event in pygame.event.get():
+    if event.type == QUIT:
+      mainLoop = False
+  #screen.fill(bgColor)
+  #screen.blit(fontImage,(x,y))
+  screen.blit(image1,(0,0))
+  pygame.display.update()
+pygame.quit()
