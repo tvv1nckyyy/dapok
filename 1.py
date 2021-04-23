@@ -57,6 +57,6 @@ random.shuffle(a)
 #
 i=0
 while(i<len(a)):
-  print(a[i])
+  print(a[i],end="")
   input()
   i+=1
