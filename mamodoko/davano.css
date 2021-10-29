@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Hack";
+  font-weight: normal;
+  font-style: normal;
+  src: local("Hack"), url("hack.ttf") format('truetype');
+}
 body {
   counter-reset: nepe;
   margin: 0;
@@ -49,11 +55,25 @@ body::-webkit-scrollbar { width: 0; height: 0; }
 }
 .cardback, .cardface {
   position: absolute;
-  background-image: url("svg/nu.svg");
   background-size: contain;
   height: 80vh;
-  width: 45vh;
+  width: 60vh;
   display: block;
+}
+.cardback {
+  background-image: url("svg/davano/hu.svg");
+}
+.ma .cardface {
+  background-image: url("svg/davano/ma.svg");
+}
+.mo .cardface {
+  background-image: url("svg/davano/mo.svg");
+}
+.do .cardface {
+  background-image: url("svg/davano/do.svg");
+}
+.ko .cardface {
+  background-image: url("svg/davano/ko.svg");
 }
 .nepe, .pene {
   position: absolute;
